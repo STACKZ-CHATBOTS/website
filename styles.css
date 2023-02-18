@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+
+
+.font-main {
+    font-family: 'M PLUS 1 Code', sans-serif;
+    
+}
+
+
+
+    /* Default height for small devices */
+    #header {
+        height: 400px;
+      }
+  
+      /* Height for devices larger than 992px */
+      @media (min-width: 992px) {
+        #header {
+          height: 600px;
+        }
+      }
+
+@media (min-width : 992px) {
+  .css-selector {
+    height: 500px;
+    background: linear-gradient(30deg, #4baaff, #032689, #000000, #087c1f);
+    background-size: 1200% 1200%;
+    -webkit-animation: AnimationName 15s ease infinite;
+    -moz-animation: AnimationName 15s ease infinite;
+    -o-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+  }
+}
+      .css-selector {
+        height: 300px;
+        background: linear-gradient(30deg, #4baaff, #032689, #000000, #087c1f);
+        background-size: 800% 800%;
+        -webkit-animation: AnimationName 15s ease infinite;
+        -moz-animation: AnimationName 15s ease infinite;
+        -o-animation: AnimationName 15s ease infinite;
+        animation: AnimationName 15s ease infinite;
+    }
+    @-webkit-keyframes AnimationName {
+        0%{background-position:33% 0%}
+        50%{background-position:68% 100%}
+        100%{background-position:33% 0%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:33% 0%}
+        50%{background-position:68% 100%}
+        100%{background-position:33% 0%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:33% 0%}
+        50%{background-position:68% 100%}
+        100%{background-position:33% 0%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:33% 0%}
+        50%{background-position:68% 100%}
+        100%{background-position:33% 0%}
+    }
+
+    hr.dashed {
+      border-top: 3px dashed #bbb;
+    }
+
+    .sec-1 {
+      max-height: 500px;
+    }
+
+
+    @media (min-width:992px) {
+      .icon-hand {
+        display: block;
+      }
+    }
+
