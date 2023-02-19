@@ -17,20 +17,21 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://kit.fontawesome.com/b1c54b17e4.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!--Navbar-->
     <nav class="navbar navbar-light bg-light sticky-top">
       <div class="container-fluid">
-        <div class="navbar-brand font-main">
-          <img
+        <div class="navbar-brand font-main d-flex align-items-center p-1">
+          <img class="mx-2"
             src="./images/logo-dark-clear.png"
             alt="logo"
             height="30"
             width="30"
           />
-          <a class="navbar-brand" href="index.html">Stackz Technologies</a>
+          <a class="navbar-brand" href="index.html" style="font-size: 1.3em;">Stackz Technologies</a>
         </div>
       </div>
     </nav>
@@ -38,7 +39,7 @@
     <div class="css-selector text-center">
       <div
         class="mask p-5"
-        style="background-color: rgba(0, 0, 0, 0.3); min-height: 100%"
+        style="min-height: 100%"
       >
         <div class="d-flex justify-content-center align-items-center">
           <div class="text-light">
@@ -46,17 +47,25 @@
               Building Better
               <strong class="text-success">Technology</strong> Together
             </h1>
-            <button class="btn btn-outline-light" style="font-size: 1.15em;">Contact Us</button>
+            <button id="scroll-contact" type="button" class="shadow-lg btn btn-outline-light" style="font-size: 1.15em;">Contact Us</button>
           </div>
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      var button = document.getElementById("scroll-contact")
+      button.addEventListener("click",(e)=>{
+          e.preventDefault();
+          var contact2 = document.getElementById("contact-div");
+          contact2.scrollIntoView({behavior: "smooth", block: "center"});
+      })
+    </script>
 
     <!--Features-->
     <div class="container mt-5">
         <div class="row">
             <div class="col">
-                <h4 class="font-main">
+                <h4 class="font-main shadow rounded p-1 features-headers">
                 Solutions Adapted to yout needs.</h4>
                 <hr class="dashed"></hr>
                 <p class="font-main">
@@ -76,7 +85,7 @@
     <div class="container mt-5">
       <div class="row ">
         <div class="col">
-          <h4 class="font-main">
+          <h4 class="font-main shadow p-1 rounded features-headers">
             Next-Generation Technology for Your Business
           </h4>
           <hr class="dashed">
@@ -89,5 +98,94 @@
         </div>
       </div>
     </div>
+    <!--Contact Us-->
+    <div id="contact-div" class="container shadow rounded mt-5 p-5" style="max-width: fit-content;">
+      <div class="d-flex justify-content-center">
+        <h2 class="font-main"><bold>Contact Us!</bold></h2>
+      </div>
+      <form class="font-main" id="contact-info">
+        <div class="my-3">
+          <label for="name-input" class="form-label"><i class="fa fa-user" aria-hidden="true"></i> Name<strong style="color: red;">*</strong></label>
+          <input id="name-input" class="form-control" placeholder="Please Input Your Name" type="text" style="width: 50vh;" required>
+        </div>
+        <div class="my-3">
+          <label for="email-input" class="form-label"><i class="fas fa-mail-bulk    "></i> E-mail<strong style="color: red;">*</strong></label>
+          <input id="email-input" class="form-control" type="email" placeholder="email@example.com" required>
+        </div>
+        <div class="my-3">
+          <label for="phone-input" class="form-label"><i class="fa fa-phone" aria-hidden="true"></i> Phone Number</label>
+          <input id="phone-input" class="form-control" type="text" pattern="[0-9]"  placeholder="Please Enter a Phone #">
+        </div>
+        <div class="my-3">
+          <label for="service-select" class="form-label"><i class="fa-solid fa-briefcase"></i> What do you want to do with us?<strong style="color: red;">*</strong></label>
+          <select class="form-select" id="service-select" required>
+            <option selected>Consulting</option>
+            <option>Development</option>
+            <option>Cloud & Networking</option>
+            <option>Support</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+          <button type="submit" class="spinner-btn btn btn-outline-success"><h5>Submit</h5></button>
+        </div>
+      </form>
+      <script src="./app.js"></script>
+    </div>
+    <!--Footer-->
+    <footer>
+      <div class="container-fluid mt-5 p-0">
+        <div class="card bg-white">
+            <div class="row mb-4">
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="footer-text pull-left">
+                        <div class="d-flex">
+                            <img class="align-self-center" src="./images/logo-dark-clear.png" alt="logo" style="height : 40px; width: 40px;">
+                            <h1 class="font-main align-self-center">Stackz</h1>
+                        </div>
+                        <p class="card-text">We deliver customized solutions using cutting-edge technology to help businesses succeed. Contact us to learn more about how we can help you thrive in the digital age.</p>
+                        <div class="social mt-2 mb-3"> <i class="fa fa-facebook-official fa-lg"></i> <i class="fa fa-instagram fa-lg"></i> <i class="fa fa-twitter fa-lg"></i> <i class="fa fa-linkedin-square fa-lg"></i> <i class="fa fa-facebook"></i> </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2"></div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <h5 class="heading">Services</h5>
+                    <ul>
+                        <li>Consulting</li>
+                        <li>Development</li>
+                        <li>Cloud & Networking</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <h5 class="heading">Industries</h5>
+                    <ul class="card-text">
+                        <li>Finance</li>
+                        <li>Public Sector</li>
+                        <li>Smart Office</li>
+                        <li>Retail</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <h5 class="heading">Company</h5>
+                    <ul class="card-text">
+                        <li>About Us</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                        <li>Join Us</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="divider mb-4"> </div>
+            <div class="row" style="font-size:10px;">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div class="pull-left">
+                        <p><i class="fa fa-copyright"></i> 2023 Stackz</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
   </body>
 </html>

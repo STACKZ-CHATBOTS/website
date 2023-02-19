@@ -10,21 +10,17 @@
 
     /* Default height for small devices */
     #header {
-        height: 400px;
+        min-height: 600px;
       }
   
       /* Height for devices larger than 992px */
-      @media (min-width: 992px) {
-        #header {
-          height: 600px;
-        }
-      }
+
 
 @media (min-width : 992px) {
   .css-selector {
     height: 500px;
     background: linear-gradient(30deg, #4baaff, #032689, #000000, #087c1f);
-    background-size: 1200% 1200%;
+    background-size: 100% 100%;
     -webkit-animation: AnimationName 15s ease infinite;
     -moz-animation: AnimationName 15s ease infinite;
     -o-animation: AnimationName 15s ease infinite;
@@ -76,3 +72,58 @@
       }
     }
 
+
+    .features-headers {
+      transition: transform 500ms;
+    }
+
+    .features-headers:hover {
+      transform: scale(1.05);
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0
+  }
+  
+  ul>li {
+      padding: 4px;
+      color:#C5CAE9;
+  }
+  
+  ul>li:hover {
+      color: #037c0de8;
+      cursor: pointer
+  }
+  
+  hr {
+      border-width: 3px
+  }
+  
+  .card {
+      padding: 2% 7%
+  }
+  
+  .social>i {
+      padding: 1%;
+      font-size: 15px
+  }
+  
+  .social>i:hover {
+      color: #037c0de8;
+      cursor: pointer
+  }
+  
+  .policy>div {
+      padding: 4px
+  }
+  
+  .heading {
+      font-family: 'Titillium Web', sans-serif;
+      color: black
+  }
+  
+  .divider {
+      border-top: 2px solid
+  }
