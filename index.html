@@ -18,6 +18,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/b1c54b17e4.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -77,7 +78,7 @@
                        help you achieve your business goals with the power of technology
                 </p>
             </div>
-            <div class="icon-hand d-flex justify-content-center col">
+            <div class="col d-flex justify-content-center">
                 <i class="fa-sharp fa-solid fa-handshake" style="font-size:10em; position:relative; top:20%;"></i>
             </div>
         </div>
@@ -114,7 +115,7 @@
         </div>
         <div class="my-3">
           <label for="phone-input" class="form-label"><i class="fa fa-phone" aria-hidden="true"></i> Phone Number</label>
-          <input id="phone-input" class="form-control" type="text" pattern="[0-9]"  placeholder="Please Enter a Phone #">
+          <input id="phone-input" class="form-control" type="text" pattern="[0-9]{10}"  placeholder="Please Enter a Phone #">
         </div>
         <div class="my-3">
           <label for="service-select" class="form-label"><i class="fa-solid fa-briefcase"></i> What do you want to do with us?<strong style="color: red;">*</strong></label>
