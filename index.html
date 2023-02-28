@@ -17,9 +17,16 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('n94cG1LMZtvQQJre7');
+        })();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/b1c54b17e4.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
   </head>
   <body>
     <!--Navbar-->
@@ -42,7 +49,7 @@
         class="mask p-5"
         style="min-height: 100%"
       >
-        <div class="d-flex justify-content-center align-items-center">
+        <div id="head" class="d-flex justify-content-center align-items-center">
           <div class="text-light">
             <h1 class="mb-3 font-main">
               Building Better
@@ -107,19 +114,19 @@
       <form class="font-main" id="contact-info">
         <div class="my-3">
           <label for="name-input" class="form-label"><i class="fa fa-user" aria-hidden="true"></i> Name<strong style="color: red;">*</strong></label>
-          <input id="name-input" class="form-control" placeholder="Please Input Your Name" type="text" style="width: 50vh;" required>
+          <input name="name" id="name-input" class="form-control" placeholder="Please Input Your Name" type="text" style="width: 50vh;" required>
         </div>
         <div class="my-3">
           <label for="email-input" class="form-label"><i class="fas fa-mail-bulk    "></i> E-mail<strong style="color: red;">*</strong></label>
-          <input id="email-input" class="form-control" type="email" placeholder="email@example.com" required>
+          <input name="email" id="email-input" class="form-control" type="email" placeholder="email@example.com" required>
         </div>
         <div class="my-3">
           <label for="phone-input" class="form-label"><i class="fa fa-phone" aria-hidden="true"></i> Phone Number</label>
-          <input id="phone-input" class="form-control" type="text" pattern="[0-9]{10}"  placeholder="Please Enter a Phone #">
+          <input id="phone-input" name="phone" class="form-control" type="text" pattern="[0-9]{10}"  placeholder="Please Enter a Phone #">
         </div>
         <div class="my-3">
           <label for="service-select" class="form-label"><i class="fa-solid fa-briefcase"></i> What do you want to do with us?<strong style="color: red;">*</strong></label>
-          <select class="form-select" id="service-select" required>
+          <select class="form-select" id="service-select" name="service" required>
             <option selected>Consulting</option>
             <option>Development</option>
             <option>Cloud & Networking</option>
