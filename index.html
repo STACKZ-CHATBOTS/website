@@ -50,9 +50,9 @@
       </div>
     </nav>
     <!-- HEADER -->
-    <div class="css-selector text-center h-lg-100">
+    <div class="css-selector text-center align-items-center d-flex justify-content-center">
       <div class="mask p-5">
-        <div id="head" class="d-flex justify-content-center align-items-center h-100">
+        <div id="head" class="d-flex justify-content-center align-items-center">
           <div class="text-light">
             <h1 class="mb-3 font-main">
               Building Better
@@ -62,18 +62,25 @@
           </div>
         </div>
       </div>
+      <button id="arrow" class="head-btn"><i class="fa-solid fa-arrow-down arr" ></i></button>
     </div>
     <script type="text/javascript">
-      var button = document.getElementById("scroll-contact")
-      button.addEventListener("click",(e)=>{
+      var button1 = document.getElementById("scroll-contact")
+      button1.addEventListener("click",(e)=>{
           e.preventDefault();
           var contact2 = document.getElementById("contact-div");
           contact2.scrollIntoView({behavior: "smooth", block: "center"});
       })
+      var arrow = document.getElementById("arrow");
+      arrow.addEventListener("click", (e) => {
+        e.preventDefault();
+        var info = document.getElementById("arrow");
+        info.scrollIntoView({behavior: "smooth", block: "start"});
+      })
     </script>
 
     <!--Features-->
-    <div class="container mt-5">
+    <div id="info" class="container mt-5">
         <div class="row">
             <div class="col-lg-6 col-12">
                 <h4 class="font-main shadow rounded p-1 features-headers">

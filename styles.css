@@ -18,7 +18,7 @@
 
 @media (min-width : 992px) {
   .css-selector {
-    height: 500px;
+    height: 100vh;
     background: linear-gradient(30deg, #4baaff, #032689, #000000, #087c1f);
     background-size: 100% 100%;
     -webkit-animation: AnimationName 15s ease infinite;
@@ -28,13 +28,20 @@
   }
 }
       .css-selector {
-        height: 300px;
-        background: linear-gradient(30deg, #4baaff, #032689, #000000, #087c1f);
-        background-size: 800% 800%;
-        -webkit-animation: AnimationName 15s ease infinite;
-        -moz-animation: AnimationName 15s ease infinite;
-        -o-animation: AnimationName 15s ease infinite;
+        height: 92.8vh;
+        background: linear-gradient(30deg, #4baaff, #032689, #000000, #69e2ec);
+        background-size: 400% 400%;
         animation: AnimationName 15s ease infinite;
+    }
+
+    .css-selector::after {
+      content: "";
+      background: linear-gradient(to top, #ffffff, transparent);
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
     @-webkit-keyframes AnimationName {
         0%{background-position:33% 0%}
@@ -129,4 +136,44 @@
   }
 
 
+ .head-btn {
+  position: absolute;
+  bottom:8vh;
+  background-color: transparent;
+  border-width: 0px;
+ }
+
+
+.arr{
+  color: #ffffff; 
+  font-size:4em;
+  transition: all .2s ease-in-out;
+  animation: arrow-animation 7s infinite ease;
+}
+
+ .arr:hover {
+  transform: scale(1.4);
+ }
+
+@keyframes font-scale {
+  from {
+    font-size: 4em;
+  }
+  to {
+    font-size: 5em;
+  }
+}
  
+
+
+@keyframes arrow-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
