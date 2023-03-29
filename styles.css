@@ -16,23 +16,23 @@
       /* Height for devices larger than 992px */
 
 
-@media (min-width : 992px) {
+@media only screen and (max-width : 600px) {
   .css-selector {
-    height: 100vh;
+    height: 88.3vh;
     background: linear-gradient(30deg, #4baaff, #032689, #000000, #087c1f);
     background-size: 100% 100%;
-    -webkit-animation: AnimationName 15s ease infinite;
-    -moz-animation: AnimationName 15s ease infinite;
-    -o-animation: AnimationName 15s ease infinite;
     animation: AnimationName 15s ease infinite;
   }
 }
-      .css-selector {
+@media screen and (min-width:601px){
+        .css-selector {
         height: 92.8vh;
         background: linear-gradient(30deg, #4baaff, #032689, #000000, #69e2ec);
         background-size: 400% 400%;
         animation: AnimationName 15s ease infinite;
     }
+}
+
 
     .css-selector::after {
       content: "";
